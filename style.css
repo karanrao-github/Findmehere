@@ -1,141 +1,268 @@
-body {
+:root {
+    --main-bg: #1a191d;
+    --primary-font: #ffffff;
+    --secondary-font: #c4c4c47d;
+    --para-font: rgb(211, 211, 211);
+    --heading-accordion: #740cdc; 
+    --extended-accordion: #241d41;
+    --box-radii: 5px;
+}
+
+
+
+*{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    background: linear-gradient(#8bdbf5, #f18b9b);
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
+   box-sizing: border-box;
+   font-family:'Poppins', sans-serif ;
 }
 
-.main-container {
-    text-align: center;
+body {
+    background-color:var(--main-bg);
 }
 
-h3 {
-    font-size: 15px;
-    font-weight: 300;
-    margin: 10%;
-}
-
-h4 {
-    margin-top: -5%;
-    font-weight: 500;
-}
-
-.profile-img {
-   width: 200px;
-   border-radius: 50%;
-}
-
-/* Social Media Logo styling */
-.fa-brands, .fa-solid {
-    margin-block: 5%;
-    padding-inline: 4%;
-    margin-bottom: -2%;
-    font-size: 25px;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Hover */
-/* Twitter */
-.fa-twitter:hover {
-    color: #1DA1F2;
-  }
-  
-  /* LinkedIn */
-  .fa-linkedin-in:hover {
-    color: #0A66C2;
-  }
-  
-  /* GitHub */
-  .fa-github:hover {
-    color: rgb(68, 25, 68);
-  }
-
-  /* Slack */
-  .fa-slack:hover {
-    color: orangered;
-  }
-
-  /* Mail */
-.fa-envelope:hover {
-    color: rgb(83, 21, 252);
-}
-.items {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.item-container {
-    font-size: 20px;
-    height: 50px;
-    background-color: rgb(252, 252, 252);
-    border-radius: 30px;
-    margin-block: 5px; 
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(51, 48, 255);
-    font-weight: 600;
-    box-shadow: 1px 2px 4px #9c9c9c;
+    /* min-height: 100vh; */
+   flex-wrap: wrap;
+   margin-top: 5em;
 }
 
-.item-container:hover {
-    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+.about{
+    max-width: 650px;
+    /* margin-right: 1rem; */
+    max-height: 10%;
+    /* border: #2c3599 solid 2px; */
+}
+
+h2 {
+    font-size: 3em;
     color: #fff;
 }
 
-/* Responsive Code */
-
-@media screen and (min-width: 800px) {
-    
-h3 {
-    font-size: 18px;
-    font-weight: 300;
-    margin: 4%;
-}
-
-h4 {
-    margin-top: 0.5%;
-    font-weight: 500;
-}
-
-.profile-img {
-   width: 200px;
-   border-radius: 50%;
-}
-
-/* Social Media Logo styling */
-.fa-brands, .fa-solid {
-    margin-block: 5%;
-    padding-inline: 1%;
-    font-size: 30px;
-    /* border: 2px solid red; */
-    margin-top: 3%;
-}
-
-
-.items {
-    flex-direction: row;
-    margin-top: 1%;
-    justify-content: center;
-}
-
-.item-container {
+h5, p {
     font-size: 20px;
-    padding-inline: 20px;
-    background-color: rgba(240, 248, 255, 0.915);
-    border-radius: 30px;
-    margin-inline: 2%; 
 }
+
+h5 {
+    color: var(--primary-font);
 }
+
+h6{
+    color: var(--secondary-font);
+    font-size: 16px;
+}
+
+h2, h5, h6, p {
+    margin: 0.8rem;
+}
+
+p {
+    color: var(--para-font);
+    line-height: 1.6;
+}
+
+a {
+    display: flex;
+    margin: 1rem;
+}
+
+a:hover{
+    color: var(--heading-accordion);
+}
+
+a, i{
+    color: var(--secondary-font);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+i {
+    margin-inline-end: 1rem;
+}
+
+/* -- Hover effect on icons -- */
+.fa-github:hover {
+    color: var(--primary-font);
+}
+
+.fa-free-code-camp:hover {
+    color: orange;
+}
+
+.fa-linkedin:hover {
+    color: rgb(116, 116, 248);
+}
+
+.fa-envelope:hover {
+    color: rgb(253, 45, 45);
+}
+
+/* To remove account links in smaller screen */
+@media (max-width: 1100px) {
+    section > a,
+    .fa-github, 
+    .fa-envelope, 
+    .fa-linkedin,
+    .fa-free-code-camp {
+       display: none;
+    }
+}
+
+/* --- Accordion --- */
+.accordion {
+    max-width: 500px;
+    margin: 1em;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: .7rem;
+    border-radius: var(--box-radii);
+    background: var(--heading-accordion);
+    color: var(--primary-font);
+    cursor: pointer;
+}
+
+.content {
+    margin-block: .8rem;
+    border-radius: var(--box-radii);
+}
+
+.content > p {
+    color: var(--para-font);
+    line-height: normal;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+/* Project Section */
+.content > h5 > a {
+    margin: 0;
+    color: var(--primary-font);
+}
+
+.content > h5 > a > .fa-square-arrow-up-right {
+    color: #bb77ff;
+    margin-inline-start: 10px;
+}
+
+
+/* Resume Section */
+.resume{
+    text-align: center;
+}
+
+.fa-file-arrow-down {
+    font-size: 2em;
+    margin: 0 auto;
+}
+
+/* Tools Section */
+.tools {
+    text-align: center;
+}
+
+.content > h5 > a:hover{
+    text-decoration: underline;
+}
+
+.language-used {
+    background-color: #2c3599;
+    color: var(--primary-font);
+    padding: .3rem 1rem;
+    border-radius: 20px;
+    margin: 0.2rem;
+}
+
+/* Line to break content*/
+.line {
+    padding: 1px;
+    background-color: var(--secondary-font);
+    margin-block: 5%;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.accordion .contentBx .label::before {
+content: '+';
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+font-size: 1.5em;
+} 
+
+.accordion .contentBx.active .label::before {
+    content: '-';
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    background-color: var(--extended-accordion);
+    height: 0;
+    overflow: hidden;
+    transition: 0.5%;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+    height: fit-content;
+    padding: .9em;
+}
+@media (max-width: 1100px) {
+    .accordion {
+        padding-bottom: 5em;
+    }
+}
+
+/* FOOTER */
+footer {
+    display: none;
+}
+/* Footer Activates in smaller screen */
+@media (max-width: 1100px) {
+    footer{
+        background-color: var(--heading-accordion);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #footer-git,
+    #footer-fcc,
+    #footer-mail,
+    #footer-linkedin
+     {
+        color: var(--primary-font);
+    }
+
+    #footer-git:hover {
+        color: var(--primary-font);
+    }
+    
+    #footer-fcc:hover {
+        color: orange;
+    }
+    
+    #footer-linkedin:hover {
+        color: rgb(116, 116, 248);
+    }
+    
+    #footer-mail:hover {
+        color: rgb(232, 153, 153);
+    }
+    
+}
+
 
