@@ -1,33 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>findmehere</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Karan Rao Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/8e2e74d657.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
 </head>
+
 <body>
-    
-    <div class="main-container">
-        <h3>BASED IN PUNE, INDIA</h3>
-        <h1>KARAN RAO</h1>
-        <h4>Frontend Dev</h2>
-        <img src="images/profile-img.jpg" alt="" class="profile-img">
-        <div class="app-icons">
-           <a href="https://github.com/karanrao-github" target="_blank"><i class="fa-brands fa-github"></i></a>
-           <a href="https://twitter.com/Karan__ronin" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-           <a href="https://www.linkedin.com/in/karan-rao-programmer/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-           <a href="mailto:karanrao81441@outlook.com, karanrao81441@protonmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a> 
-        </div>
-        <div class="items">
-            <a href="https://karanrao-github.github.io/bput-landing-page/" target="_blank" class="item-container">University Landing Page </a>
-            <a href="https://karanrao-webdev-quiz.pages.dev/" target="_blank" class="item-container">WebNoob</a>
-            <a href="#" target="_blank" class="item-container">Photography Portfolio</a>            
-        </div>
+    <div class="container">
+        <!-- START OF WELCOME SECTION -->
+        <section class="about">
+            <h2 class="glitch">KARAN RAO</h2>
+            <h6>Frontend Developer</h6>
+            <h5>About</h5>
+            <p>
+                Hi, I'm Karan. I have recently completed my degree in Bachelors of Computer Application at Sambalpur
+                University in Odisha, India. I have a passion for software development and Software testing, from UI/UX to end user prespective. I
+                enjoy building dynamic, creative products from start to finish, focusing on developing and testing intuitive
+                experiences that constantly grow and improve based on user metrics.
+            </p>
+            <a href="https://github.com/karanrao-github"><i class="fa-brands fa-github"></i>karanrao-github</a>
+            <a href="https://www.freecodecamp.org/karan-rao"><i class="fa-brands fa-free-code-camp"></i>freeCodeCamp</a>
+            <a href="https://www.linkedin.com/in/karan-rao-programmer/"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+            <a href="mailto:karanrao81441@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+        </section>
+<!-- END OF WELCOME SECTION -->
+<!-- START OF Accordion -->
+        <section class="accordion">
+            <div class="contentBx">
+                <div class="label">Project</div>
+                <div class="content">
+                    <h5>
+                        <a href="https://karanrao-github.github.io/bput-landing-page/">
+                            BPUT Landing Page<i class="fa-solid fa-square-arrow-up-right"></i>
+                        </a>                        
+                    </h5>
+                    <p>
+                        A concept of Biju Pattnaik University of Technology website with responsive design to work with various screen sizes and refreshed UI/UX for better user experience.
+                    </p>
+                    <span class="language-used">HTML</span>
+                    <span class="language-used">CSS</span>
+                    <span class="language-used">Javascript</span>
+
+                    <!-- Line Divider -->
+                    <div class="line"></div>
+
+                    <h5>
+                        <a href="https://karanrao-webdev-quiz.pages.dev/">
+                            WebNoob<i class="fa-solid fa-square-arrow-up-right"></i>
+                        </a>
+                        
+                    </h5>
+                    <p> 
+                        A Quiz based web game consist of basic questions related toHTML, CSS and Javascript were each have four option if answer is correct, you earn a point if worng you loose one.
+                    </p>
+                    <span class="language-used">HTML</span>
+                    <span class="language-used">CSS</span>
+                    <span class="language-used">Javascript</span>
+                </div>
+            </div>
+            <div class="contentBx">
+                <div class="label">Resume</div>
+                <div class="content">
+                    <p class="resume">
+                       Download my resume
+                    </p>
+                    <a href="" download><i class="fa-solid fa-file-arrow-down"></i></a>
+                </div>
+            </div>
+            <div class="contentBx">
+                <div class="label">Tools</div>
+                <div class="content">
+                    <p class="tools">
+                        Coming Soon
+                    </p>
+                </div>
+            </div>
+        </section>
+<!-- END OF Accordion -->
     </div>
-    
+<!-- START OF FOOTER -->
+
+<footer>
+   <a class="footer-git" href="https://github.com/karanrao-github"><i class="fa-brands fa-github" id="footer-git"></i></a>
+   <a class="footer-fcc" href="https://www.freecodecamp.org/karan-rao"><i class="fa-brands fa-free-code-camp" id="footer-fcc"></i></a>
+   <a class="footer-linkedin" href="https://www.linkedin.com/in/karan-rao-programmer/"><i class="fa-brands fa-linkedin" id="footer-linkedin"></i></a>
+   <a class="footer-mail" href="mailto:karanrao81441@gmail.com"><i class="fa-solid fa-envelope"id="footer-mail"></i></a>
+</footer>
+<!-- END OF FOOTER -->
 </body>
+
 </html>
