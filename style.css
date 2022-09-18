@@ -25,20 +25,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
    flex-wrap: wrap;
    margin-top: 5em;
 }
 
 .about{
     max-width: 650px;
-    /* margin-right: 1rem; */
     max-height: 10%;
-    /* border: #2c3599 solid 2px; */
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 3rem;
     color: #fff;
 }
 
@@ -82,6 +79,25 @@ a, i{
 i {
     margin-inline-end: 1rem;
 }
+
+@media (max-width: 400px) {
+    h3{
+        font-size: 2rem;
+    }
+
+    h5, p {
+        font-size: 18px;
+    }
+
+    p{
+        line-height: normal;
+    }
+
+    h6{
+        font-size: 16px;
+    }
+}
+
 
 /* -- Hover effect on icons -- */
 .fa-github:hover {
@@ -154,6 +170,9 @@ i {
     margin-inline-start: 10px;
 }
 
+.lang {
+    display: flex;
+}
 
 /* Resume Section */
 .resume{
@@ -225,6 +244,13 @@ font-size: 1.5em;
         padding-bottom: 5em;
     }
 }
+
+@media (max-width: 400px) {
+    .label {
+        font-size: .9rem;
+    }
+}
+
 
 /* FOOTER */
 footer {
